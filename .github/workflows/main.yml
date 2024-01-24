@@ -54,4 +54,4 @@ jobs:
           # pm2 start dist/main.js
           
           echo "Gửi thông báo!"
-          curl -X POST -H "Content-Type: application/json" -H "Authorization:${{ secrets.DISCORD_TOKEN }}" -d '{"content":"React của tôi đã deploy thành công link: https://dinhkhang.io.vn/ "}' ${{ secrets.DISCORD_URL }}
+          curl -X POST -H "Content-Type: application/json" -H "Authorization:${{ secrets.DISCORD_TOKEN }}" -d '{"content":"React của tôi đã deploy thành công link: https://khangdev.io.vn/ "}' ${{ secrets.DISCORD_URL }}
