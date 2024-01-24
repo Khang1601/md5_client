@@ -24,7 +24,7 @@ jobs:
         port: 22
         script: |
           echo "Truy cập vào thư mục dự án"
-          cd /var/www/246_md5_project/server
+          cd /var/www/md5_project/md5_client
           echo "Pull code mới từ github"
           git pull
           echo "Kích hoạt NVM"
