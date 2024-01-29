@@ -38,17 +38,9 @@ jobs:
           sed -i 's/NUMBER/${{ secrets.SV_PORT }}/g' .env
           sed -i 's/HOST_ADDRESS/${{ secrets.SV_HOST }}/g' .env
           sed -i 's/PROTOCOL_TYPE/https:\/\//g' .env
-          # sed -i 's/DB_USER/${{ secrets.DB_USER }}/g' .env
-          # sed -i 's/DB_PASSWORD/${{ secrets.DB_PASSWORD }}/g' .env
-          # sed -i 's/DB_HOST/${{ secrets.HOST }}/g' .env
-          # sed -i 's/DB_PORT/${{ secrets.DB_PORT }}/g' .env
-          # sed -i 's/DB_NAME/${{ secrets.DB_NAME }}/g' .env
 
           echo "--------Cài đặt package theo package.json"
           npm ci
-
-          # echo "Khởi tạo prisma client cho node module"
-          # npx prisma generate
 
           echo "--------Build dự án"
           npm run build
@@ -56,10 +48,6 @@ jobs:
           echo "--------Reset Bộ Nhớ Swap"
           sudo swapoff -a; sudo swapon -a
 
-          # echo "--------Reset PM2"
-          # pm2 delete all
-          # pm2 start dist/main.js
-
           echo "--------Gửi thông báo!"
-          curl -X POST -H "Content-Type: application/json" -H "Authorization:${{ secrets.DISCORD_TOKEN }}" -d '{"content":"React của tôi đã deploy thành công link: https://khangdev.io.vn/ "}' ${{ secrets.DISCORD_URL }}
+          curl -X POST -H "Content-Type: application/json" -H "Authorization:${{ secrets.DISCORD_TOKEN }}" -d '{"content":"ReactJS đã deploy thành công link: https://khangdev.io.vn/ "}' ${{ secrets.DISCORD_URL }}
       

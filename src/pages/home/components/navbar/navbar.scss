@@ -1,0 +1,173 @@
+.sup_navbar {
+    width: 100%;
+    height: $supNavH;
+    display: flex;
+    justify-content: center;
+    background-color: $secondaryColor;
+    font-size: $m;
+    .sup_navbar_content {
+        width: 100%;
+        max-width: $maxW;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+        font-family: $fontJosefin;
+    }
+}
+header {
+    width: 100%;
+    height: $navH;
+    display: flex;
+    justify-content: center;
+    background-color: $primaryColor;
+    font-size: $m;
+    .header_content {
+        width: 100%;
+        max-width: $maxW;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1em;
+        .content_left {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            font-size: 1em;
+            .logo {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                width: 150px;
+                font-size: 1em;
+                img {
+                    height: 50px;
+                    width: auto;
+                }
+            }
+            nav {
+                ul {
+                    height: 100%;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1em;
+                    list-style: none;
+                    .item {
+                        font-size: 1em;
+                        font-family: $fontKanit;
+                        margin-right: 1.5em;
+                        cursor: pointer;
+                    }
+                    .sup {
+                        transition: all 0.3s;
+                        position: relative;
+                        .sup_menu {
+                            display: none;
+                            position: absolute;
+                            width: 200px;
+                            min-height: 150px;
+                            background-color: $primaryColor;
+                            left: 0;
+                            bottom: -(calc($navH / 4));
+                            border-top: 2px solid #EE4266;
+                            transform: translateY(100%);
+                            &:hover {
+                                display: block;
+                            }
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 60px;
+                                display: block;
+                                background-color: transparent;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                transform: translateY(-100%);
+                                &:hover {
+                                    .sup {
+                                        color: #EE4266;
+                                    }
+                                    .sup_menu {
+                                        display: block;
+                                    }
+                                }
+                            }
+                            .sup_menu_item {
+                                color: white;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding: 10px;
+                                transition: all 0.2s;
+                                &:hover {
+                                    background-color: #F4F5F9;
+                                    color: black;
+                                }
+                            }
+                        }
+                        &:hover {
+                            color: #EE4266;
+                            margin-right: 115px;
+                            .sup_menu {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content_right {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1em;
+            .item {
+                color: white;
+                margin-left: 10px;
+                font-size: 1.3em;
+            }
+            .user_box {
+                span {
+                    color: white;
+                    font-size: 0.7em;
+                    font-family: $fontKanit;
+                }
+                img {
+                    height: 2em;
+                    width: auto;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                    margin-left: 10px;
+                }
+            }
+            .authen_link {
+                font-size: 1em;
+                font-family: $fontKanit;
+                color: white;
+                cursor: pointer;
+            }
+            .language_box {
+                .dropdown {
+                    button {
+                        background-color: transparent !important;
+                        border: none !important;
+                    }
+                }
+            }
+            .dropdown {
+                button {
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent !important;
+                    border: none !important;
+                }
+            }
+        }
+    }
+}
