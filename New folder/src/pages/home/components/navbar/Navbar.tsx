@@ -97,6 +97,7 @@ export default function Navbar() {
           <div className='content_right'>
             <i className="item fa-solid fa-magnifying-glass"></i>
             <i className="item fa-solid fa-bag-shopping"></i>
+
             {
               userStore.data ? (
                 <Dropdown>
@@ -133,6 +134,7 @@ export default function Navbar() {
                 </div>
               )
             }
+            
             <div className='language_box'>
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
