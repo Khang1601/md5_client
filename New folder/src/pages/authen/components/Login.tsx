@@ -24,7 +24,7 @@ export default function Login() {
                     localStorage.setItem("token", res.data.token)
                     Modal.success({
                         title: "Thông báo",
-                        content: "Dang nhap thanh cong, comeback homepage",
+                        content: "Đăng nhập thành công, quay về homepage",
                         onOk: () => {
                             window.location.href = "/"
                         }
@@ -52,7 +52,7 @@ export default function Login() {
                             localStorage.setItem("token", result.data.token)
                             Modal.success({
                                 title: "Thông báo",
-                                content: "Dang nhap thanh cong, comeback homepage",
+                                content: "Đăng nhập thành công, quay về homepage",
                                 onOk: () => {
                                     window.location.href = "/"
                                 }
