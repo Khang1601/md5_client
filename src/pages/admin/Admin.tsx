@@ -4,7 +4,9 @@ import { useSelector } from "react-redux"
 import Navbar from "./components/Navbar";
 import Container from "./components/Container";
 import './admin.scss'
+
 export default function Admin() {
+
     const [menuState, setMenuState] = useState(false);
     const userStore = useSelector((store: Store) => store.userStore);
     useEffect(() => {
@@ -12,6 +14,7 @@ export default function Admin() {
             window.location.href = "/"
         }
     }, [userStore])
+    
     return (
         <>
             {

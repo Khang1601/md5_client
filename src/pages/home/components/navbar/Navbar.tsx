@@ -97,9 +97,11 @@ export default function Navbar() {
           <div className='content_right'>
             <i className="item fa-solid fa-magnifying-glass"></i>
             <i className="item fa-solid fa-bag-shopping"></i>
+
             {
               userStore.data ? (
                 <Dropdown>
+
                   <Dropdown.Toggle variant="success" id="dropdown-basic">
                     <div className='item user_box'>
                       <span>{isNaN(Number(userStore.data.userName)) ? userStore.data.userName : userStore.data.email.split("@")[0]}</span>
@@ -117,19 +119,22 @@ export default function Navbar() {
                         </Dropdown.Item>
                       )
                     }
+
                     <Dropdown.Item onClick={() => {
                       localStorage.removeItem("token")
                       dispatch(userAction.setData(null))
                     }}>
                       <span style={{ color: "red" }}>Logout</span>
                     </Dropdown.Item>
+
                   </Dropdown.Menu>
+
                 </Dropdown>
               ) : (
                 <div onClick={() => {
                   window.location.href = "/authen"
                 }}>
-                  <span className='item authen_link'>register/login</span>
+                  <span className='item authen_link'>Register/Login</span>
                 </div>
               )
             }

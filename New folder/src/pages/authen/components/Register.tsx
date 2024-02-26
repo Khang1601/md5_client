@@ -17,14 +17,14 @@ export default function Register({containerRef}: {
             }
             await api.userApi.register(newUser);
             Modal.success({
-                title: "Thong Bao",
-                content: "Tao tai khoan thanh cong",
+                title: "Thông Báo",
+                content: "Tạo tài khoản thành công",
                 onOk: () => {
                     containerRef.current.classList.remove("right-panel-active");
                 }
             })
         }catch(err: any) {
-            message.error(err?.response?.data?.message || "Loi server")
+            message.error(err?.response?.data?.message || "Lỗi server")
         }
     }
     
@@ -46,8 +46,8 @@ export default function Register({containerRef}: {
                     </a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="user name" name="userName"/>
-                <input type="email" placeholder="email" name="email"/>
+                <input type="text" placeholder="User name" name="userName"/>
+                <input type="email" placeholder="Email" name="email"/>
                 <input type="password" placeholder="Password" name="password"/>
                 <button type="submit">Sign Up</button>
             </form>

@@ -73,13 +73,16 @@ export default function Container({ menuState }: {
                     ))
                 }
             </div>
+
             <div className='content'>
                 <div className='history'>
                     <span>Home</span>
                     <span>Admin</span>
                     <span>Product</span>
                 </div>
+
                 <div className='content_body'>
+                    
                     <Outlet />
                 </div>
             </div>

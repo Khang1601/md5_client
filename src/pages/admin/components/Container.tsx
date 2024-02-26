@@ -25,6 +25,23 @@ export default function Container({ menuState }: {
             ]
         },
         {
+            title: 'Category',
+            child: [
+                {
+                    title: "Add",
+                    link: null,
+                    fn: () => {
+                        alert("ok")
+                    }
+                },
+                {
+                    title: "List",
+                    link: "category/list",
+                    fn: null
+                }
+            ]
+        },
+        {
             title: 'Product',
             child: [
                 {
@@ -48,6 +65,7 @@ export default function Container({ menuState }: {
                 {
                     menus.map(item => (
                         <div key={Date.now() * Math.random()} className='menu_item'>
+
                             <button onClick={(e) => {
                                 let targetEl = (e.target as any).parentNode.querySelector('.menu_item_sub');
                                 if (targetEl.classList.length > 1) {
@@ -58,6 +76,7 @@ export default function Container({ menuState }: {
                             }} className='menu_item_main btn btn-dark'>
                                 {item.title}
                             </button>
+                            
                             <ul className='menu_item_sub'>
                                 {
                                     item.child?.map(supItem => (<li onClick={() => {
@@ -73,6 +92,7 @@ export default function Container({ menuState }: {
                     ))
                 }
             </div>
+
             <div className='content'>
                 <div className='history'>
                     <span>Home</span>

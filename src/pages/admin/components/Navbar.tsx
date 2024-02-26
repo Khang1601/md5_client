@@ -27,9 +27,10 @@ export default function Navbar({ menuState, setMenuState }: {
             <Dropdown.Item onClick={() => {
               Modal.confirm({
                 title: "Logout",
-                content: "Ok?",
+                content: "Bạn muốn logout?",
                 onOk: () => {
-
+                  localStorage.removeItem("token");
+                  window.location.reload();
                 }
               })
             }}>Logout</Dropdown.Item>
