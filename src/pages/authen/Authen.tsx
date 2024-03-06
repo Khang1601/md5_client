@@ -1,9 +1,11 @@
-import './authen.scss'
+import './authen.css'
 import Register from './components/Register'
 import Login from './components/Login'
 import { useRef } from 'react'
+
 export default function Authen() {
     const containerRef = useRef<any>();
+    
     return (
         <div ref={containerRef} className="container" id="container">
             <Register containerRef={containerRef}/>

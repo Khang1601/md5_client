@@ -5,6 +5,7 @@ import { Dropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { userAction } from '@/stores/slices/user.slice';
+
 export default function Navbar() {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
@@ -18,6 +19,7 @@ export default function Navbar() {
           Khangshop sản phẩm luôn tốt nhất! {t('hello')}
         </div>
       </section>
+
       <header>
         <div className='header_content'>
           <div className='content_left'>
@@ -94,6 +96,7 @@ export default function Navbar() {
               </ul>
             </nav>
           </div>
+
           <div className='content_right'>
             <i className="item fa-solid fa-magnifying-glass"></i>
             <i className="item fa-solid fa-bag-shopping"></i>
@@ -131,13 +134,16 @@ export default function Navbar() {
 
                 </Dropdown>
               ) : (
+
                 <div onClick={() => {
                   window.location.href = "/authen"
                 }}>
                   <span className='item authen_link'>Register/Login</span>
                 </div>
+                
               )
             }
+
             <div className='language_box'>
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -163,6 +169,7 @@ export default function Navbar() {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
+
           </div>
         </div>
       </header>

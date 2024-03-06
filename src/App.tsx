@@ -3,7 +3,10 @@ import { useEffect } from 'react'
 import { api } from './services/apis'
 import { useDispatch } from 'react-redux'
 import { userAction } from './stores/slices/user.slice'
+
+
 export default function App() {
+
   const dispatch = useDispatch()
   useEffect(() => {
     try {
@@ -15,6 +18,7 @@ export default function App() {
       localStorage.removeItem("token")
     }
   }, [])
+
   return ( 
     <Route/>
   )

@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import "./main.scss";
+
+
 export default function MenuBtn({open, onClickFn}: {
     open: boolean,
     onClickFn: any
