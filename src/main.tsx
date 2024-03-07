@@ -2,13 +2,13 @@
 import ReactDOM from 'react-dom/client'
 
 import App from './App.tsx'
-import './main.css'
+import './main.scss'
 import './i18n'
 import { Provider } from 'react-redux'
 import { store } from './stores/index.ts'
 
 //--------
-import ShopContextProvider from './Context/ShopContext.jsx'
+import ShopContextProvider from './Context/ShopContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     
